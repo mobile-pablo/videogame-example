@@ -1,0 +1,15 @@
+@VideoGameExample_HostAddress = http://localhost:5257
+
+GET {{VideoGameExample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{VideoGameExample_HostAddress}}/api/VideoGame
+Accept: application/json
+
+###
+GET {{VideoGameExample_HostAddress}}/api/VideoGame/{{id}}
+Accept: application/json
+
+###

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZqRm3LYuGOA=",
+  "success": true,
+  "projectFilePath": "/Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/VideoGameExample.csproj",
+  "expectedPackageFiles": [
+    "/Users/pablo/.nuget/packages/microsoft.aspnetcore.openapi/9.0.7/microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "/Users/pablo/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/Users/pablo/.nuget/packages/scalar.aspnetcore/2.6.4/scalar.aspnetcore.2.6.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Access to the path '/Users/pablo/.local/share/NuGet/http-cache' is denied.",
+      "projectPath": "/Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/VideoGameExample.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/VideoGameExample.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
