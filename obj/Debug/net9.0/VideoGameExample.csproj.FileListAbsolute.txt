@@ -31,3 +31,4 @@
 /Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/obj/Debug/net9.0/VideoGameExample.pdb
 /Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/obj/Debug/net9.0/VideoGameExample.genruntimeconfig.cache
 /Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/obj/Debug/net9.0/ref/VideoGameExample.dll
+/Users/pablo/RiderProjects/VideoGameExample/VideoGameExample/obj/Debug/net9.0/VideoGameExample.sourcelink.json

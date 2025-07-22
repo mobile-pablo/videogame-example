@@ -49,12 +49,24 @@ public class VideoGameController : ControllerBase
         return Ok(videoGames);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet]
+    [Route("{id:int}")]
     public ActionResult<VideoGame> GetVideoGame(int id)
     {
         VideoGame? videoGame = videoGames.FirstOrDefault(v => v.Id == id);
-        if(videoGame == null) return NotFound();
+        if(videoGame is null) return NotFound();
         
         return Ok(videoGame);
+    }
+
+    [HttpPost]
+    [Route("post")]
+    public ActionResult<VideoGame> PostVideoGame(VideoGame? newVideoGame)
+    {
+        if(newVideoGame is null) return BadRequest();
+        
+        newVideoGame.Id = videoGames.Max(v => v.Id) + 1;
+        videoGames.Add(newVideoGame);
+        return CreatedAtAction(nameof(PostVideoGame), new { id  = newVideoGame.Id}, newVideoGame);
     }
 }
