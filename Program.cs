@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using VideoGameExample.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddDbContext<VideoGamesDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Server=localhost;User Id=sa;Password=DB_Password;TrustServerCertificate=true;")));
 
 var app = builder.Build();
 

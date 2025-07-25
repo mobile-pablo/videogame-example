@@ -69,4 +69,27 @@ public class VideoGameController : ControllerBase
         videoGames.Add(newVideoGame);
         return CreatedAtAction(nameof(PostVideoGame), new { id  = newVideoGame.Id}, newVideoGame);
     }
+
+    [HttpPut("{id:int}")]
+    public IActionResult PutVideoGame(int id, VideoGame newVideoGame)
+    {
+        var game = videoGames.FirstOrDefault(v => v.Id == id);
+        if(game is null) return NotFound();
+        
+        game.Title = newVideoGame.Title;
+        game.Platform = newVideoGame.Platform;
+        game.Developer = newVideoGame.Developer;
+        game.Publisher = newVideoGame.Publisher;
+        
+        return NoContent();
+    }
+
+    [HttpDelete("{id:int}")]
+    public IActionResult DeleteVideoGame(int id) {
+        var game = videoGames.FirstOrDefault(v => v.Id == id);
+        if(game is null) return NotFound();
+        
+        videoGames.Remove(game);
+        return NoContent();
+    }
 }
