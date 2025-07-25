@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<VideoGamesDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Server=localhost;User Id=sa;Password=DB_Password;TrustServerCertificate=true;")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
